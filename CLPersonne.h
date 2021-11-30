@@ -9,8 +9,8 @@ namespace NS_Comp_Mappage
 		System::String^ nom;
 		System::String^ prenom;
 		System::String^ dateN;
-		System::String^ DateA;
-		System::String^ DateE;
+		System::String^ dateA;
+		System::String^ dateE;
 	public:
 		System::String^ Select(void);
 		System::String^ Insert(void);
@@ -19,8 +19,14 @@ namespace NS_Comp_Mappage
 		void setId(int);
 		void setNom(System::String^);
 		void setPrenom(System::String^);
+		void setDateN(System::String^);
+		void setDateA(System::String^);
+		void setDateE(System::String^);
 		int getId(void);
 		System::String^ getNom(void);
 		System::String^ getPrenom(void);
+		System::String^ getDateN(void);
+		System::String^ getDateA(void);
+		System::String^ getDateE(void);
 	};
 }
