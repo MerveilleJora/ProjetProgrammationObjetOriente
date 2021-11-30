@@ -3,7 +3,7 @@
 
 namespace NS_Comp_Svc
 {
-	ref class CLservicePersonnel//service gestion de personnels 
+	ref class CLservicePersonnel//service gestion de clients 
 	{
 	private:
 		//Objet de composant 
@@ -11,10 +11,10 @@ namespace NS_Comp_Svc
 		NS_Comp_Mappage::CLPersonne^ oTBPersonne;
 	public:
 		CLservicePersonnel(void);//constructeur 
-		//les autres méthodes
+		//les autres mÃ©thodes
 		System::Data::DataSet^ afficherPersonnel(System::String^);
-		void creerPersonnel(System::String^, System::String^);
-		void supprimerPersonnel(System::String^, System::String^);
-		void modifierPersonnel(System::String^, System::String^);
+		void creerPersonnel(int, System::String^, System::String^, System::String^, System::String^);
+		void supprimerPersonnel(int);
+		void modifierPersonnel(int);
 	};
 }
