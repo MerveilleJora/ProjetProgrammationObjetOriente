@@ -11,10 +11,10 @@ namespace NS_Comp_Svc
 		NS_Comp_Mappage::CLPersonne^ oTBPersonne;
 	public:
 		CLserviceClient(void);//constructeur 
-		//les autres méthodes
+		//les autres mÃ©thodes
 		System::Data::DataSet^ afficherClient(System::String^);
-		void creerClient(System::String^, System::String^);
-		void supprimerClient(System::String^, System::String^);
-		void modifierClient(System::String^, System::String^);
+		void creerClient(int, System::String^, System::String^, System::String^, System::String^);
+		void supprimerClient(int);
+		void modifierClient(int);
 	};
 }
