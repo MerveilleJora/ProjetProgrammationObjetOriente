@@ -11,7 +11,7 @@ namespace NS_Comp_Mappage
 		System::String^ DateEmission;
 		System::String^ DatePayement;
 		System::String^ MoyenDePayement;
-		System::String^ DateSoldeEnregistré;
+		System::String^ DateSoldeEnregistre;
 		System::String^ NomArticle;
 		int QuantiteArticle;
 		int TotalArticleSelonNature;
@@ -39,6 +39,8 @@ namespace NS_Comp_Mappage
 		void setDateLivraison(System::String^);
 		void setDateEmission(System::String^);
 		void setDatePayement(System::String^);
+		void setMoyenDePayement(System::String^);
+		void setDateSoldeEnregistre(System::String^);
 		void setNomArticle(System::String^);
 		void setQuantiteArticle(int);
 		void setTotalArticleSelonNature(int);
@@ -60,6 +62,8 @@ namespace NS_Comp_Mappage
 		System::String^ getDateLivraison(void);
 		System::String^ getDateEmission(void);
 		System::String^ getDatePayement(void);
+		System::String^ getMoyenDePayement(void);
+		System::String^ getDateSoldeEnregistre(void);
 		System::String^ getNomArticle(void);
 		int getQuantiteArticle(void);
 		int getTotalArticleSelonNature(void);
