@@ -5,37 +5,39 @@ namespace NS_Comp_Mappage
 	{
 	private:
 		System::String^ sSql;
-		double panierMoyen;
-		double chiffreAffaire;
-		double sousSeuil;
-		System::String^ articlesplusvendu;
-		System::String^ articlesmoinsvendu;
-		double totalparclient;
-		double valeurCommerciale;
-		double valeurAchat;
+		double PanierMoyen;
+		double ChiffreAffaire;
+		double SousSeuil;
+		System::String^ Articlesplusvendu;
+		System::String^ Articlesmoinsvendu;
+		double Totalparclient;
+		double ValeurCommerciale;
+		double ValeurAchat;
+		double Simulation;
 	public:
-		//paniermoyen
-		void setpanierMoyen(double);
-		double getpanierMoyen(void);
-		//chiffre d'affaire
-		void setchiffreAffaire(void);
-		void getchiffreAffaire(double);
-		//Sous seuil d'approvisionnement
-		void setsousSeuil(double);
-		double getsousSeuil(double);
-		//Montant total par client 
+
+#pragma region SET
+		void setPanierMoyen(double);
+		void setChiffreAffaire(double);
+		void setSousSeuil(double);
 		void setTotalparclient(double);
-		double getTotalparclient(void);
-		//Articles les moins et plus vendus
-		void setArticleplusvendu(System::String);
-		System::String^ getArticleplusvendu(void);
-		void setArticlemoinsvendu(System::String);
-		System::String^ getArticlemoinsvendu(void);
-		//Valeur commerciale
+		void setArticlesplusvendu(System::String^);
+		void setArticlesmoinsvendu(System::String^);
 		void setValeurCommerciale(double);
-		double getValeurCommerciale(void);
-		//Valeur d'achat
 		void setValeurAchat(double);
+		void setSimulation(double);
+#pragma endregion
+
+#pragma region GET
+		double getPanierMoyen(void);
+		double getChiffreAffaire(void);
+		double getSousSeuil(void);
+		double getTotalparclient(void);
+		System::String^ getArticlesplusvendu(void);
+		System::String^ getArticlesmoinsvendu(void);
+		double getValeurCommerciale(void);
 		double getValeurAchat(void);
+		double getSimulation(void);
+#pragma endregion
 	};
 }
