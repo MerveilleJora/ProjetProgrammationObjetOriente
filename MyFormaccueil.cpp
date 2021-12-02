@@ -9,8 +9,8 @@ using namespace System::Windows::Forms;
 void Main(array<String^>^ args) {
     Application::EnableVisualStyles();
     Application::SetCompatibleTextRenderingDefault(false);
-    //POOProjet::MyFormaccueil form;
+    POOProjet::MyFormaccueil form;
     //POOProjet::MyFormpersonnel form;
-    POOProjet::MyFormstatistiques form;
+    //POOProjet::MyFormstatistiques form;
     Application::Run(% form);
 }

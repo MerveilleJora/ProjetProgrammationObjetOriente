@@ -56,6 +56,7 @@ namespace POOProjet {
 
 	private: System::Windows::Forms::Button^ Button_Entrer_Perso;
 	private: System::Windows::Forms::DataGridView^ DataGridView_Perso;
+	private: System::Windows::Forms::Button^ Button_Retour_Perso;
 
 
 
@@ -87,6 +88,7 @@ namespace POOProjet {
 			this->TextBox_Perso = (gcnew System::Windows::Forms::TextBox());
 			this->Button_Entrer_Perso = (gcnew System::Windows::Forms::Button());
 			this->DataGridView_Perso = (gcnew System::Windows::Forms::DataGridView());
+			this->Button_Retour_Perso = (gcnew System::Windows::Forms::Button());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->DataGridView_Perso))->BeginInit();
 			this->SuspendLayout();
 			// 
@@ -179,11 +181,21 @@ namespace POOProjet {
 			this->DataGridView_Perso->Size = System::Drawing::Size(600, 223);
 			this->DataGridView_Perso->TabIndex = 15;
 			// 
+			// Button_Retour_Perso
+			// 
+			this->Button_Retour_Perso->Location = System::Drawing::Point(564, 9);
+			this->Button_Retour_Perso->Name = L"Button_Retour_Perso";
+			this->Button_Retour_Perso->Size = System::Drawing::Size(81, 47);
+			this->Button_Retour_Perso->TabIndex = 16;
+			this->Button_Retour_Perso->Text = L"Retour à l\'accueil";
+			this->Button_Retour_Perso->UseVisualStyleBackColor = true;
+			// 
 			// MyFormpersonnel
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(657, 637);
+			this->Controls->Add(this->Button_Retour_Perso);
 			this->Controls->Add(this->DataGridView_Perso);
 			this->Controls->Add(this->Button_Entrer_Perso);
 			this->Controls->Add(this->TextBox_Perso);

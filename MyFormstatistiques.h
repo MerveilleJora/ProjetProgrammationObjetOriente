@@ -66,6 +66,8 @@ namespace POOProjet {
 	private: System::Windows::Forms::Label^ Label_Calculer_Stat;
 	private: System::Windows::Forms::Label^ Label_Identifier_Stat;
 	private: System::Windows::Forms::Label^ Label_Simuler_Stat;
+	private: System::Windows::Forms::Button^ Button_Retour_Stat;
+
 
 
 
@@ -105,6 +107,7 @@ namespace POOProjet {
 			this->Label_Calculer_Stat = (gcnew System::Windows::Forms::Label());
 			this->Label_Identifier_Stat = (gcnew System::Windows::Forms::Label());
 			this->Label_Simuler_Stat = (gcnew System::Windows::Forms::Label());
+			this->Button_Retour_Stat = (gcnew System::Windows::Forms::Button());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->DataGridView_Stat))->BeginInit();
 			this->SuspendLayout();
 			// 
@@ -270,11 +273,22 @@ namespace POOProjet {
 			this->Label_Simuler_Stat->TabIndex = 33;
 			this->Label_Simuler_Stat->Text = L"Simuler des variations";
 			// 
+			// Button_Retour_Stat
+			// 
+			this->Button_Retour_Stat->Location = System::Drawing::Point(564, 9);
+			this->Button_Retour_Stat->Name = L"Button_Retour_Stat";
+			this->Button_Retour_Stat->Size = System::Drawing::Size(81, 47);
+			this->Button_Retour_Stat->TabIndex = 34;
+			this->Button_Retour_Stat->Text = L"Retour à l\'accueil";
+			this->Button_Retour_Stat->UseVisualStyleBackColor = true;
+			this->Button_Retour_Stat->Click += gcnew System::EventHandler(this, &MyFormstatistiques::Button_Retour_Stat_Click);
+			// 
 			// MyFormstatistiques
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(657, 637);
+			this->Controls->Add(this->Button_Retour_Stat);
 			this->Controls->Add(this->Label_Simuler_Stat);
 			this->Controls->Add(this->Label_Identifier_Stat);
 			this->Controls->Add(this->Label_Calculer_Stat);
@@ -305,6 +319,8 @@ namespace POOProjet {
 	private: System::Void button10_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
 private: System::Void MyFormstatistiques_Load(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void Button_Retour_Stat_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }
