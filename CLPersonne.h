@@ -27,7 +27,6 @@ namespace NS_Comp_Mappage
 		System::String^ Delete(void);
 		System::String^ Update(void);
 
-		void setIdPersonne(int);
 		void setNom(System::String^);
 		void setPrenom(System::String^);
 		void setAdressePersonnelle(System::String^);
@@ -44,7 +43,6 @@ namespace NS_Comp_Mappage
 		void setDateE(System::String^);
 		void setTypePersonne(System::String^);
 
-		int getIdPersonne(void);
 		System::String^ getNom(void);
 		System::String^ getPrenom(void);
 		System::String^ getAdressePersonnelle(void);
