@@ -14,7 +14,7 @@ namespace NS_Comp_Svc
 		
 		//les autres méthodes
 		System::Data::DataSet^ afficherPersonnel(System::String^);
-		void creerPersonnel(int, System::String^, System::String^, System::String^, System::String^, System::String^);
+		void creerPersonnel(System::String^, System::String^, System::String^, int, System::String^, System::String^, System::String^);
 		void supprimerPersonnel(int);
 		void modifierPersonnel(int);
 	};
