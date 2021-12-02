@@ -5,28 +5,42 @@ namespace NS_Comp_Mappage
 	{
 	private:
 		System::String^ sSql;
-		int Id;
-		System::String^ nom;
-		System::String^ prenom;
-		System::String^ dateN;
-		System::String^ dateA;
-		System::String^ dateE;
+		int IdPersonne;
+		System::String^ Nom;
+		System::String^ Prenom;
+		System::String^ AdressePersonnelle;
+		System::String^ AdresseFacturation;
+		System::String^ AdresseLivraison;
+		System::String^ DateN;
+		System::String^ DateA;
+		System::String^ DateE;
+		System::String^ TypePersonne;
 	public:
 		System::String^ Select(void);
 		System::String^ Insert(void);
 		System::String^ Delete(void);
 		System::String^ Update(void);
-		void setId(int);
+
+		void setIdPersonne(int);
 		void setNom(System::String^);
 		void setPrenom(System::String^);
+		void setAdressePersonnelle(System::String^);
+		void setAdresseFacturation(System::String^);
+		void setAdresseLivraison(System::String^);
 		void setDateN(System::String^);
 		void setDateA(System::String^);
 		void setDateE(System::String^);
-		int getId(void);
+		void setTypePersonne(System::String^);
+
+		int getIdPersonne(void);
 		System::String^ getNom(void);
 		System::String^ getPrenom(void);
+		System::String^ getAdressePersonnelle(void);
+		System::String^ getAdresseFacturation(void);
+		System::String^ getAdresseLivraison(void);
 		System::String^ getDateN(void);
 		System::String^ getDateA(void);
 		System::String^ getDateE(void);
+		System::String^ getTypePersonne(void);
 	};
 }
