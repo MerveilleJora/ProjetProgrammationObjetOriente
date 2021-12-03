@@ -13,9 +13,9 @@ System::String^ NS_Comp_Mappage::CLPersonne::Insert(void)
 {
 	return "INSERT INTO Personne (Nom,Prenom) VALUES ('" + this->Nom + "', '" + this->Prenom + "') INSERT INTO Associer(id_type, id_personne) SELECT 'personnel', id_personne FROM Personne WHERE Nom = '" + this->Nom + "' AND Prenom = '" + this->Nom + "'; INSERT INTO Adresse(id_adresse, id_CP) SELECT '" + this->AdressePersonnelle + "', '" + this->CPAdressePersonnelle + "' FROM Personne WHERE Nom = '" + this->Nom + "' AND Prenom = '" + this->Prenom + "'; INSERT INTO Posseder(id_personne, id_adresse, type_adresse) SELECT id_personne, id_adresse, 'perso' FROM Personne, Adresse WHERE Nom = '" + this->Nom + "' AND Prenom = '" + this->Prenom + "' AND id_adresse = '" + this->AdressePersonnelle + "'; INSERT INTO CodePostal(id_CP, id_ville) SELECT id_CP, '" + this->VilleAdressePersonnelle + "' FROM Adresse WHERE id_CP = '" + this->CPAdressePersonnelle + "'; INSERT INTO Ville(id_ville) VALUES('" + this->VilleAdressePersonnelle + "'); INSERT INTO Date(date) SELECT '" + this->DateE + "'FROM Personne WHERE Nom = '" + this->Nom + "' AND Prenom = '" + this->Prenom + "'; INSERT INTO Date_type(id_date, id_personne) SELECT id_date, id_personne FROM Personne, Date WHERE Nom = '" + this->Nom + "' AND Prenom = '" + this->Prenom + "' AND date = '" + this->DateE + "'; INSERT INTO Avoir(type_date, id_date) SELECT 'embauche', id_date FROM Personne, Date WHERE Nom = '" + this->Nom + "' AND Prenom = '" + this->Prenom + "' AND date = '" + DateE + "'; ";
 }
-System::String^ NS_Comp_Mappage::CLPersonne::Delete(void)
+System::String^ NS_Comp_Mappage::CLPersonne::DeleteP(void)
 {
-	return "";
+	return "DELETE FROM Associer WHERE id_personne ='"+this->Id+"' AND id_type ='personnel'";
 }
 System::String^ NS_Comp_Mappage::CLPersonne::Update(void)
 {
