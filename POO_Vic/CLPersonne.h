@@ -26,6 +26,7 @@ namespace NS_Comp_Mappage
 		System::String^ SelectC(void);
 		System::String^ Insert(void);
 		System::String^ Delete(void);
+		System::String^ DeleteP(void);
 		System::String^ Update(void);
 
 		void setIdPersonne(int);
