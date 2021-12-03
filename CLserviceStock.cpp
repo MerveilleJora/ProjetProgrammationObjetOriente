@@ -14,7 +14,7 @@ System::Data::DataSet^ NS_Comp_Svc::CLserviceStock::afficherStock(System::String
 	return this->oCad->getRows(sSql, dataTableName);
 }
 
-void NS_Comp_Svc::CLserviceStock::creerStock(System::String^ ReferenceArticle, System::String^ NatureArticle, System::String^ CouleurArticle, System::String^ NomArticle, int QuantiteArticle, int SeuilApprovisionnement, double TauxTVA, double PrixHT, double PrixHTGrosseCommande)
+void NS_Comp_Svc::CLserviceStock::creerStock(System::String^ ReferenceArticle, System::String^ NatureArticle, System::String^ CouleurArticle, System::String^ NomArticle, System::String^ QuantiteArticle, System::String^ SeuilApprovisionnement, System::String^ TauxTVA, System::String^ PrixHT, System::String^ PrixHTGrosseCommande)
 {
 	System::String^ sSql;
 	this->oTBStock->setReferenceArticle(ReferenceArticle);
@@ -41,11 +41,11 @@ void NS_Comp_Svc::CLserviceStock::supprimerStock(System::String^ ReferenceArticl
 	this->oCad->actionRows(sSql);
 }
 
-void NS_Comp_Svc::CLserviceStock::modifierStock(System::String^ ReferenceArticle)
+void NS_Comp_Svc::CLserviceStock::modifierStock(System::String^ QuantiteArticle, System::String^ Refarticle)
 {
 	System::String^ sSql;
-	this->oTBStock->setReferenceArticle(ReferenceArticle);
+	this->oTBStock->setReferenceArticle(QuantiteArticle);
+	this->oTBStock->setReferenceArticle(Refarticle);
 	sSql = this->oTBStock->Update();
 
 	this->oCad->actionRows(sSql);
-}
