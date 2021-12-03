@@ -6,7 +6,7 @@ System::String^ NS_Comp_Mappage::CLStock::Select(void)
 }
 System::String^ NS_Comp_Mappage::CLStock::Insert(void)
 {
-	return "INSERT INTO Article (nom_article, couleur, prix_HT, taux_TVA, quantite_article, seuil_rea, taux_TVA_stock, type_article) VALUES('"+this->NomArticle+"', '"+this->CouleurArticle+"', '"+this->PrixHT+"', '"+this->TauxTVA+"', '"+this->QuantiteArticle+"', '"+this->SeuilApprovisionnement+"', '"+this->TauxTVA*this->QuantiteArticle+"', '"+NatureArticle+"'); INSERT INTO Type_article(type_article) SELECT type_article FROM Article WHERE nom_article = '"+NatureArticle+"'; ";
+	return "INSERT System::StringO Article (nom_article, couleur, prix_HT, taux_TVA, quantite_article, seuil_rea, taux_TVA_stock, type_article) VALUES('"+this->NomArticle+"', '"+this->CouleurArticle+"', '"+this->PrixHT+"', '"+this->TauxTVA+"', '"+this->QuantiteArticle+"', '"+this->SeuilApprovisionnement+"', '"+this->TauxTVA*this->QuantiteArticle+"', '"+NatureArticle+"'); INSERT System::StringO Type_article(type_article) SELECT type_article FROM Article WHERE nom_article = '"+NatureArticle+"'; ";
 }
 System::String^ NS_Comp_Mappage::CLStock::Delete(void)
 {
@@ -34,23 +34,23 @@ void NS_Comp_Mappage::CLStock::setNomArticle(System::String^ NomArticle)
 {
 	this->NomArticle = NomArticle;
 }
-void NS_Comp_Mappage::CLStock::setQuantiteArticle(int QuantiteArticle)
+void NS_Comp_Mappage::CLStock::setQuantiteArticle(System::String^ QuantiteArticle)
 {
 	this->QuantiteArticle = QuantiteArticle;
 }
-void NS_Comp_Mappage::CLStock::setSeuilApprovisionnement(int SeuilApprovisionnement)
+void NS_Comp_Mappage::CLStock::setSeuilApprovisionnement(System::String^ SeuilApprovisionnement)
 {
 	this->SeuilApprovisionnement = SeuilApprovisionnement;
 }
-void NS_Comp_Mappage::CLStock::setTauxTVA(double TauxTVA)
+void NS_Comp_Mappage::CLStock::setTauxTVA(System::String^ TauxTVA)
 {
 	this->TauxTVA = TauxTVA;
 }
-void NS_Comp_Mappage::CLStock::setPrixHT(double PrixHT)
+void NS_Comp_Mappage::CLStock::setPrixHT(System::String^ PrixHT)
 {
 	this->PrixHT = PrixHT;
 }
-void NS_Comp_Mappage::CLStock::setPrixHTGrosseCommande(double PrixHTGrosseCommande)
+void NS_Comp_Mappage::CLStock::setPrixHTGrosseCommande(System::String^ PrixHTGrosseCommande)
 {
 	this->PrixHTGrosseCommande = PrixHTGrosseCommande;
 }
@@ -72,23 +72,23 @@ System::String^ NS_Comp_Mappage::CLStock::getNomArticle(void)
 {
 	return this->NomArticle;
 }
-int NS_Comp_Mappage::CLStock::getQuantiteArticle(void)
+System::String^ NS_Comp_Mappage::CLStock::getQuantiteArticle(void)
 {
 	return this->QuantiteArticle;
 }
-int NS_Comp_Mappage::CLStock::getSeuilApprovisionnement(void)
+System::String^ NS_Comp_Mappage::CLStock::getSeuilApprovisionnement(void)
 {
 	return this->SeuilApprovisionnement;
 }
-double NS_Comp_Mappage::CLStock::getTauxTVA(void)
+System::String^ NS_Comp_Mappage::CLStock::getTauxTVA(void)
 {
 	return this->TauxTVA;
 }
-double NS_Comp_Mappage::CLStock::getPrixHT(void)
+System::String^ NS_Comp_Mappage::CLStock::getPrixHT(void)
 {
 	return this->PrixHT;
 }
-double NS_Comp_Mappage::CLStock::getPrixHTGrosseCommande(void)
+System::String^ NS_Comp_Mappage::CLStock::getPrixHTGrosseCommande(void)
 {
 	return this->PrixHTGrosseCommande;
 }
