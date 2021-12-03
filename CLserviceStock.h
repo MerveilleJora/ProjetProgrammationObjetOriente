@@ -12,10 +12,10 @@ namespace NS_Comp_Svc
 		NS_Comp_Mappage::CLStock^ oTBStock;
 	public:
 		CLserviceStock(void);//constructeur 
-		//les autres méthodes
+		//les autres mÃ©thodes
 		System::Data::DataSet^ afficherStock(System::String^);
-		void creerStock(System::String^, System::String^, System::String^, System::String^, int, int, double, double, double);
-		void supprimerStock(System::String^);
-		void modifierStock(System::String^);
+		void creerStock(System::String^, System::String^, System::String^, System::String^, System::String^, System::String^, System::String^, System::String^, System::String^);
+		void supprimerStock( System::String^);
+		void modifierStock(System::String^, System::String^);
 	};
 }
